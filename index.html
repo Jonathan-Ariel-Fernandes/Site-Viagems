@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
+	<title>Viagens</title>
+	<script src="https://unpkg.com/feather-icons"></script>
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script>jQuery(document).ready(function($) { 
+    $(".scroll").click(function(event){        
+        event.preventDefault();
+        $('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
+   });
+});</script>
+</head>
+<body>
+	<header>
+		<nav>
+			<p>Viagens</p>
+			<ul>
+				<li><a href="#Home" class="scroll">Home</a></li>
+				<li><a href="#Pacotes" class="scroll">Pacótes<a/></li>
+				<li><a href="#Servicos" class="scroll">Serviços<a/></li>
+				<li><a href="#Contatos" class="scroll">Contatos<a/></li>
+			</ul>
+		</nav>
+
+					<div id="Home" class="header-content">
+						<h1>Templo Sagrado</h1>
+						<p>Conheça o templo sagrado agora,não perca essa oportunidade da sua vida</p>
+						<button>Saiba mais</button>
+					</div>
+				</header>
+				<section id="Pacotes" class="pacotes">
+
+					<h1 class="pacotes-title">Conheça nossos pacótes</h1>
+
+					<div class="pacotes-cards">
+						<div class="card">
+							<div class="card-tag card-tag-top">
+								<p>Promoção</p>
+							</div>
+
+							<div class="card-tag card-tag-botton">
+								<p>R$ 2500.00</p>
+							</div>
+							<img class="card-image" src="./img/castelo.jpg" alt="castelo" />
+							<div class="card-content">
+								<h1>Pacóte 5 noites Hotel premium</h1>
+								<ul>
+									<li> <i data-feather="check-circle"></i>Café da manhã incluso</li>
+									<li> <i data-feather="check-circle"></i>Permitido animais</li>
+									<li> <i data-feather="wifi"></i>Incluso wifi</li>
+								</ul>
+								<p></p>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-tag card-tag-top">
+								<p>Promoção</p>
+							</div>
+
+							<div class="card-tag card-tag-botton">
+								<p>R$ 2500.00</p>
+							</div>
+							<img class="card-image" src="./img/lago.jpg" alt="lago" />
+							<div class="card-content">
+								<h1>Pacóte 5 noites Hotel premium</h1>
+								<ul>
+									<li> <i data-feather="check-circle"></i>Café da manhã incluso</li>
+									<li> <i data-feather="check-circle"></i>Permitido animais</li>
+									<li> <i data-feather="wifi"></i>Incluso wifi</li>
+								</ul>
+								<p></p>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-tag card-tag-top">
+								<p>Promoção</p>
+							</div>
+
+							<div class="card-tag card-tag-botton">
+								<p>R$ 2500.00</p>
+							</div>
+							<img class="card-image" src="./img/miami.jpg" alt="Miami" />
+							<div class="card-content">
+								<h1>Pacóte 5 noites Hotel premium</h1>
+								<ul>
+									<li> <i data-feather="check-circle"></i>Café da manhã incluso</li>
+									<li> <i data-feather="check-circle"></i>Permitido animais</li>
+									<li> <i data-feather="wifi"></i>Incluso wifi</li>
+								</ul>
+								<p></p>
+							</div>
+						</div>
+					</div>	
+
+				</section>
+
+				<section id="Servicos" class="servicos">
+					<h1 class="servicos-title">Serviços</h1>
+					<div class="servicos-cards">
+						<div class="card">
+							<i data-feather="map"></i>
+							<div class="card-content">
+								<h3>Tours guiados</h3>
+								<p>Lorem ipsum proin cubilia vivamus tempus suspendisse tempus euismod, auctor senectus semper habitant phasellus lobortis </p>
+							</div>
+							<button>Saíba Mais</button>
+						</div>
+
+						<div class="card">
+							<i data-feather="camera"></i>
+							<div class="card-content">
+								<h3>Fotofrafia Profissional</h3>
+								<p>Lorem ipsum proin cubilia vivamus tempus suspendisse tempus euismod, auctor senectus semper habitant phasellus lobortis </p>
+							</div>
+							<button>Saíba Mais</button>
+						</div>
+
+						<div class="card">
+							<i data-feather="navigation"></i>
+							<div class="card-content">
+								<h3>Aluguel de veículos</h3>
+								<p>Lorem ipsum proin cubilia vivamus tempus suspendisse tempus euismod, auctor senectus semper habitant phasellus lobortis </p>
+							</div>
+							<button>Saíba Mais</button>
+						</div>
+					</div>
+				</section>
+
+				<section id="Contatos" class="contato">
+					<div class="contato-card">
+						<h1>Entre em Contato</h1>
+						<ul>
+							<li><i data-feather="check-circle"></i> Rua Orlandino Formigal-Meia Praia</li>
+							<li><i data-feather="check-circle"></i>loremipsum@gmail.com</li>
+							<li><i data-feather="check-circle"></i> (55) 0000-000</li>
+						</ul>
+					</div>
+					<div id="map"></div>
+				</section>
+
+
+				<script>
+					feather.replace();
+                
+
+					function initMap() {
+  // The location of Uluru
+  var uluru = {lat: -25.344, lng: 131.036};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+  	document.getElementById('map'), {zoom: 4, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+
+</script>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?callback=initMap" />
+</script>
+</body>
+</html>
